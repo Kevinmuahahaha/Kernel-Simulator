@@ -1,21 +1,21 @@
 ## Description:
-	This project simulates the functionalities of a simplified kernel.
+This project simulates the functionalities of a simplified kernel.
 	z.B. 
 	- handling read/write, aka. taking with the harddrive.
 	- handling resource requests
 	- task scheduling
 	- read codes(sudo machine instructions)
 	
-	Tasks are pre-configed in a config file. These tasks will then go through the entire process of scheduling till they're finished.
-	This project provides it's own code-parser. See demo to get a sense of how these sudo-machine-codes are written.
-	Scheduling algorithm: Time-shared, dynamic priority.
+Tasks are pre-configed in a config file. These tasks will then go through the entire process of scheduling till they're finished.
+This project provides it's own code-parser. See demo to get a sense of how these sudo-machine-codes are written.
+Scheduling algorithm: Time-shared, dynamic priority.
 
 ## How it looks:
-	Running the project:
-	![running](https://github.com/Kevinmuahahaha/Kernel-Simulator/blob/main/images/demo1.png)
+Running the project:
+![running](https://github.com/Kevinmuahahaha/Kernel-Simulator/blob/main/images/demo1.png)
 	
-	This project can parse sudo-machine-codes:
-	![codes](https://github.com/Kevinmuahahaha/Kernel-Simulator/blob/main/images/demo_codes.png)
+This project can parse sudo-machine-codes:
+![codes](https://github.com/Kevinmuahahaha/Kernel-Simulator/blob/main/images/demo_codes.png)
 
 
 ## Cross-platform building:
