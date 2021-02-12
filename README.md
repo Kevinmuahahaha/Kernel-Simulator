@@ -8,8 +8,12 @@ This project simulates the functionalities of a simplified kernel.
 	- read codes(sudo machine instructions)
 	- usw.
 	
-Tasks are pre-configed in a config file. These tasks will then go through the entire process of scheduling till they're finished.
+Tasks are pre-configed in a config file. 
+
+These tasks will then go through the entire process of scheduling till they're finished.
+
 This project provides it's own code-parser. See demo to get a sense of how these sudo-machine-codes are written.
+
 Scheduling algorithm: Time-shared, dynamic priority.
 
 ## How it looks:
