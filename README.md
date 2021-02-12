@@ -1,4 +1,4 @@
-##Description:
+## Description:
 	This project simulates the functionalities of a simplified kernel.
 	z.B. 
 	- handling read/write, aka. taking with the harddrive.
@@ -10,7 +10,7 @@
 	This project provides it's own code-parser. See demo to get a sense of how these sudo-machine-codes are written.
 	Scheduling algorithm: Time-shared, dynamic priority.
 
-##How it looks:
+## How it looks:
 	Running the project:
 	![running](https://github.com/Kevinmuahahaha/Kernel-Simulator/blob/main/images/demo1.png)
 	
@@ -18,7 +18,7 @@
 	![codes](https://github.com/Kevinmuahahaha/Kernel-Simulator/blob/main/images/demo_codes.png)
 
 
-##Cross-platform building:
+## Cross-platform building:
 	edit utils.cpp
 	to build on linux, make sure the first line contains:
 	#define LINUX
@@ -27,7 +27,7 @@
 	#define WINDOWS
 
 
-##Using this project's compiler:
+## Using this project's compiler:
 	build and run: 'samples/get version.cpp'
 	
 		199711 for C++98
@@ -41,10 +41,10 @@
 		Target: x86_64-pc-linux-gnu
 
 
-##Compiling on Linux (requires pthread)
+## Compiling on Linux (requires pthread)
 	g++ -pthread  main.cpp utils.cpp MemorySpace.cpp DataStructures.cpp  SystemStatus.cpp HighLevelScheduler.cpp ProcessScheduler.cpp ModuleBanker.cpp CodeExecutor.cpp FileSystem.cpp Module_DiskAccess.cpp
 
-##Compiling on Windows
+## Compiling on Windows
 	Your compiler must support pthread
 	e.g Cygwin
 	see https://stackoverflow.com/questions/2150938/can-i-get-unixs-pthread-h-to-compile-in-windows
