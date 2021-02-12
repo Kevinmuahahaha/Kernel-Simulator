@@ -1,0 +1,188 @@
+#codefile
+
+
+DEF ^FILE_NAME "" 
+DEF $LONG_STRING "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+DEF $NOT_EMPTY "a"
+MOV $NOT_EMPTY ^FILE_NAME
+
+MOV $LONG_STRING ^FILE_NAME
+
+
+DEF $DISPLAY ""
+MOV ^FILE_NAME $DISPLAY
+MOV $DISPLAY P
+
+
+DIE
+
+REQ B 50 C 10
+
+NOP
+NOP
+NOP
+NOP
+NOP
+DIE
+
+
+DIE
+
+DEF $END_STRING "xxxxxxxxx"
+DEF $X "x"
+DEF $INDEX_STRING "x"
+DEF ^FILE_NAME "A"
+DEF $STORE "storessssssssssssssssssssssssss"
+
+JUMP_TAG:
+
+APP ^FILE_NAME $X
+
+MOV $STORE ^FILE_NAME
+
+APP $INDEX_STRING $X
+
+CMP $INDEX_STRING $END_STRING
+
+JNE JUMP_TAG:
+
+DEF $DISPLAY ""
+
+DEF ^SELECT_FILE "Axxxxx"
+
+MOV ^SELECT_FILE $DISPLAY
+
+MOV $DISPLAY P
+
+DEL ^SELECT_FILE
+
+DEF ^SELECT_FILE "Ax"
+
+MOV ^SELECT_FILE $DISPLAY
+
+
+DIE
+
+
+DEF ^FILE_NAME "file name"
+DEF ^FILE_NAME1 "file name 2"
+DEF ^FILE_NAME2 "file name 3"
+DEF ^FILE_NAME3 "file name 4"
+DEF ^FILE_NAME4 "file name 5"
+DEF ^FILE_NAME4 "file name 5"
+DEF $STRING_A "put this into the file."
+MOV $STRING_A ^FILE_NAME
+MOV $STRING_A ^FILE_NAME1
+MOV $STRING_A ^FILE_NAME2
+MOV $STRING_A ^FILE_NAME3
+MOV $STRING_A ^FILE_NAME4
+MOV $STRING_A ^FILE_NAME5
+
+DEF $CHANGE_ME "old string"
+
+MOV $CHANGE_ME P
+
+MOV ^FILE_NAME $CHANGE_ME
+
+MOV $CHANGE_ME P
+
+
+DIE
+
+DEF $EMPTY "111111"
+DEF $OK "OOOOKKK"
+MOV $EMPTY P
+DEF ^FILE ""
+MOV $EMPTY ^FILE
+MOV $OK ^FILE
+MOV $EMPTY ^FILE
+DEL ^FILE
+
+DIE
+
+
+DEF ^FILE_NAME "filename"
+DEF ^FILE_NAME_2 "filename2"
+DEF $STR "stringiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii"
+DEF $STR_1 "00xxxxxxxxxxxxxxxxxxxxxxxxx"
+DEF $STR_2 "00pppppppppppppppppppppppppppppppppppp"
+MOV $STR_1 ^FILE_NAME
+MOV $STR_2 ^FILE_NAME_2
+
+MOV $STR ^FILE_NAME
+MOV ^FILE_NAME ^FILE_NAME_2
+
+MOV ^FILE_NAME $STR_1
+MOV ^FILE_NAME_2 $STR_2
+
+DEF $STR_2 "xxxxx"
+
+MOV $STR_1 P
+MOV $STR_2 P
+
+DIE
+
+NOP
+NOP
+
+REQ A 80 B 89 D 3
+
+DEF $STRING_STORE "contetsssssssssssssssssssssssssss"
+DEF ^FILE_NAME "filename"
+DEF ^FILE_NAME_2 "filename2"
+DEF ^FILE_NAME_3 "filename3"
+DEF ^FILE_NAME_4 "filename4"
+MOV $STRING_STORE ^FILE_NAME
+MOV $STRING_STORE ^FILE_NAME_2
+MOV $STRING_STORE ^FILE_NAME_3
+
+DEL ^FILE_NAME_2
+
+
+DEF $STRING_STORE_2 "contetsssssssssssssssssssssssssss"
+APP $STRING_STORE_2 $STRING_STORE
+MOV $STRING_STORE_2 ^FILE_NAME_4
+
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP ; comment
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+
+; DEF ^FILE_NAME "test file"
+; 
+; DEF $STORE_STRING "store this string into the file"
+; 
+; MOV $STORE_STRING ^FILE_NAME
+
+; MOV $STORE_STRING ^FILE_NAME
+; 
+; DEF ^FILE_2 "second file"
+; 
+; DEF $NOT_THIS_STRING "do not print this"
+; 
+; MOV $NOT_THIS_STRING ^FILE_2
+; 
+; MOV ^FILE_NAME ^FILE_2
+; 
+; DEF $STR_TEST "x"
+; 
+; MOV ^FILE_2 $STR_TEST
+; 
+; MOV $STR_TEST P

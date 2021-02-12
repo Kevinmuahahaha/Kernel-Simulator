@@ -1,0 +1,36 @@
+#codefile
+
+DEF $STRING_INDEX_END "xxxxxxxxxx"
+DEF $STRING_INDEX "x"
+DEF $STRING_INDEX_INC "x"
+DEF $BEFORE "Before: "
+DEF $AFTER "After: "
+
+DEF $TMP_STRING "nothing here"
+DEF ^STORE_FILE "shared_file"
+MOV $TMP_STRING ^STORE_FILE	; file init
+
+LOOP_HERE:
+
+;------------------------ fetch content in the file
+
+MOV ^STORE_FILE $TMP_STRING
+
+MOV $BEFORE P
+
+MOV $TMP_STRING P
+
+MOV $STRING_INDEX ^STORE_FILE
+
+MOV $AFTER P
+
+MOV $STRING_INDEX P
+
+;------------------------ update file and display string
+
+APP $STRING_INDEX $STRING_INDEX_INC
+
+CMP $STRING_INDEX $STRING_INDEX_END
+
+JNE LOOP_HERE:
+

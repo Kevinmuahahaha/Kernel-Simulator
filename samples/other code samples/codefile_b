@@ -1,0 +1,36 @@
+#codefile
+
+REQ B 160 
+
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+
+
+NOP
+NOP
+NOP
+
+
+DEF ^FILE_NAME "BLAH.TXT"	; define filename
+DEF $STRING_CONTENT "string string string" ; define a string
+
+MOV $STRING_CONTENT P 	; move string to P (print)
+
+MOV $STRING_CONTENT ^FILE_NAME
+
+DEL ^FILE_NAME		; delete file
+
+DEF $EMPTY_STR ""	; empty string won't be stored into a file
+
+MOV ^FILE_NAME $EMPTY_STR
+
+MOV $EMPTY_STR P
+

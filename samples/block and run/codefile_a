@@ -1,0 +1,61 @@
+#codefile
+
+DEF ^FILE_A "file a"
+DEF ^FILE_B "file b"
+DEF ^FILE_C "file c"
+DEF ^FILE_D "file d"
+DEF ^FILE_E "file e"
+
+DEF $STR_RECV "xxxxxx0"
+DEF $STR_SEND "__!!__"
+
+REQ A 2 C 3 E 3
+
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+
+MOV ^FILE_A $STR_RECV
+
+MOV $STR_RECV P
+
+DEL ^FILE_A
+
+;
+;MOV $STR_RECV P
+
+;DEF ^FILE_B "file b"
+
+;
+;DEF $STR_A "aaa"
+;
+;MOV "  " ^FILE_A
+;MOV "  " ^FILE_B
+
+
+; DEF $STR_A "content AAAAAA"
+; DEF $STR_B "content BBBBBBBBBB"
+; 
+; DEF $STR_DISPLAY "This is String A Now: "
+; 
+; MOV $STR_DISPLAY P
+; MOV $STR_A P
+; 
+; MOV $STR_B ^FILE_A
+; 
+; MOV ^FILE_A $STR_A
+; 
+; MOV $STR_DISPLAY P
+; MOV $STR_A P

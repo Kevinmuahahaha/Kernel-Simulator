@@ -1,0 +1,32 @@
+#config
+
+#task 1
+memory: 512
+priority:62
+time: 50
+code: codefile_a
+#ends
+
+
+#task 2
+memory: 512
+priority:60
+time: 50
+code: codefile_a
+#ends
+
+#task 3
+memory: 512
+priority:60
+time: 50
+code: codefile_a
+#ends
+
+
+; 
+;  #task another test
+;  memory: 512
+;  priority:60
+;  time: 50
+;  code: codefile_a
+;  #ends

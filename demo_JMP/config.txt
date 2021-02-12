@@ -1,0 +1,9 @@
+#config
+
+#task 1
+memory: 512
+priority:60
+time: 50
+code: codefile_a
+#ends
+

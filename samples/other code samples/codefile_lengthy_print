@@ -1,0 +1,41 @@
+#codefile
+
+
+DEF $SOURCE_CONTENT "b"
+
+DEF $END "----------------------------"
+DEF $BEGIN "-"
+DEF $INC "-"
+
+DEF $SUB_END "----------------------------"
+DEF $SUB_BEGIN "-"
+
+DEF $CHAR "b"
+DEF $SPACE " "
+DEF $SPACE_STR " "
+
+
+
+
+2:
+
+APP $BEGIN $INC
+
+APP $SPACE_STR $SPACE
+
+DEF $CLEAN_SPACE_STR ""
+
+MOV $SPACE_STR $CLEAN_SPACE_STR
+
+APP $SPACE_STR $SOURCE_CONTENT
+
+MOV $SPACE_STR P
+
+MOV $CLEAN_SPACE_STR $SPACE_STR
+
+CMP $BEGIN $END
+
+JNE 2:	; note that when specifying a jump tag, do include the trailing ':'
+
+DEF $SOURCE_CONTENT "process last line"
+MOV $SOURCE_CONTENT P

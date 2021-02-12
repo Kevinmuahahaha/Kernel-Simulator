@@ -1,0 +1,58 @@
+#codefile
+
+DEF $END_INDEX "xxxxxxxxx"
+DEF $INDEX "x"
+DEF $INC "x"
+
+
+DEF $MAX_SPACES "            "
+DEF $MIN_SPACES " "
+DEF $NOW_SPACE " "
+DEF $S_INCR " "
+DEF $S_DECR " "
+
+DEF $TMP_STRING "x"
+DEF $TMP_TAIL "x"
+DEF $UNMOD "x"
+
+
+MAIN_LOOP: 			;--- main loop
+
+
+INC_LOOP:
+
+APP $NOW_SPACE $S_INCR		;--- INC LOOP
+
+MOV $UNMOD $TMP_STRING		;--- mod string
+
+APP $TMP_STRING $NOW_SPACE	;--- mod string
+
+APP $TMP_STRING $TMP_TAIL	;--- mod string
+
+MOV $TMP_STRING P
+
+CMP $NOW_SPACE $MAX_SPACES	;--- INC LOOP
+
+JNE INC_LOOP:			;--- INC LOOP
+
+DEC_LOOP:
+
+SNP $NOW_SPACE $S_DECR
+
+MOV $UNMOD $TMP_STRING
+
+APP $TMP_STRING $NOW_SPACE
+
+APP $TMP_STRING $TMP_TAIL
+
+MOV $TMP_STRING P
+
+CMP $NOW_SPACE $MIN_SPACES
+
+JNE DEC_LOOP:
+
+APP $INDEX $INC			;--- main loop
+
+CMP $INDEX $END_INDEX		;--- main loop
+
+JNE MAIN_LOOP:			;--- main loop

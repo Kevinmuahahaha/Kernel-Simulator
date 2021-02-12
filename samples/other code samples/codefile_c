@@ -1,0 +1,31 @@
+#codefile
+; comment starts with ';'
+; supports: MOV, REQ, DEF, APP, CMP, JMP, JEQ, JNE, DIE, DEL, NOP
+
+
+REQ B 50 C 90 D 7   ; requesting resources, this list could go on
+REQ B 50 C 90 D 7   
+REQ B 50 C 90 D 7   
+
+
+DEF $STR_CONTENT "string content"
+			; stores to MemorySpace
+			; each process has it's own "variable space":
+			; [ $STR_NAME : "content" ]
+
+
+; APP $STR_CONTENT " more" <-- this is wrong, do the following instead:
+
+
+DEF $APPEND_SUFFIX " more"	; first define, then access
+APP $STR_CONTENT $APPEND_SUFFIX ; now $STR_CONTENT will be having the suffix " more"
+
+
+DEF ^TEXT_FILE_1 	; file variables start with a '^'
+
+MOV $STR_CONTENT ^TEXT_FILE_1
+			; stores "string content" into disk
+
+
+DEF $STR_1 "aaaa"
+DEF $STR_2 "a"

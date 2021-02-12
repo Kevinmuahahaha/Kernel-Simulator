@@ -1,0 +1,24 @@
+#config
+
+#task test
+memory: 512
+priority:60
+time: 50
+code: codefile_a
+#ends
+
+
+#task test
+memory: 512
+priority:60
+time: 50
+code: codefile_b
+#ends
+
+
+#task test
+memory: 512
+priority:60
+time: 50
+code: codefile_c
+#ends
