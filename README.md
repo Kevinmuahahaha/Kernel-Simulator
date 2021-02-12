@@ -1,5 +1,6 @@
 ## Description:
 This project simulates the functionalities of a simplified kernel.
+
 	z.B. 
 	- handling read/write, aka. taking with the harddrive.
 	- handling resource requests
@@ -12,9 +13,11 @@ Scheduling algorithm: Time-shared, dynamic priority.
 
 ## How it looks:
 Running the project:
+
 ![running](https://github.com/Kevinmuahahaha/Kernel-Simulator/blob/main/images/demo1.png)
 	
 This project can parse sudo-machine-codes:
+
 ![codes](https://github.com/Kevinmuahahaha/Kernel-Simulator/blob/main/images/demo_codes.png)
 
 
