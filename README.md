@@ -19,11 +19,11 @@ Scheduling algorithm: Time-shared, dynamic priority.
 ## How it looks:
 Running the project:
 
-![running](https://github.com/Kevinmuahahaha/Kernel-Simulator/blob/main/images/demo1.png)
+![running](https://github.com/mindcrunch4u/Kernel-Simulator/blob/main/images/demo1.png)
 	
 This project can parse sudo-machine-codes:
 
-![codes](https://github.com/Kevinmuahahaha/Kernel-Simulator/blob/main/images/demo_codes.png)
+![codes](https://github.com/mindcrunch4u/Kernel-Simulator/blob/main/images/demo_codes.png)
 
 
 ## Cross-platform building:
